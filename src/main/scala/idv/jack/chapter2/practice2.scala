@@ -1,8 +1,6 @@
 package idv.jack.chapter2
 
-/**
-  * Created by user1 on 2017/5/22.
-  */
+
 object practice2 {
 
   def isSorted[A](as: Array[A], gt: (A, A) => Boolean): Boolean = {
