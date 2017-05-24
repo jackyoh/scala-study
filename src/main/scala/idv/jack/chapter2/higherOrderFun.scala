@@ -19,9 +19,10 @@ object higherOrderFun {
 
   def main(args: Array[String]): Unit ={
     /*val fun1 = sum((x: Int) => x)
-    val fun2 = fun1(1)(2)
-    println(fun2)
-*/
+           val fun2 = fun1(1)(2)
+           println(fun2)
+         */
+
     val result = sum((x: Int) => x)(1, 2)
     println(result)
 
