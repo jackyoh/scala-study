@@ -22,5 +22,13 @@ object List {
     if(as.isEmpty) Nil
     else Cons(as.head, apply(as.tail: _*))
 
+  def foldRight[A, B](as: List[A], z: B)(f: (A, B) => B): B =
+    as match {
+      case Nil => z
+      case Cons(x, xs) => f(x, foldRight(xs, z)(f))
+    }
+  
+  def appendViaFoldRight[A](l: List[A], r: List[A]): List[A] =
+    foldRight(l, r)(Cons(_,_))
 
 }
