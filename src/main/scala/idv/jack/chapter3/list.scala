@@ -27,7 +27,7 @@ object List {
       case Nil => z
       case Cons(x, xs) => f(x, foldRight(xs, z)(f))
     }
-  
+
   def appendViaFoldRight[A](l: List[A], r: List[A]): List[A] =
     foldRight(l, r)(Cons(_,_))
 
